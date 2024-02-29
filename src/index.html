@@ -20,7 +20,7 @@
     <div class="flex w-full">
       <!--Inicio sidebar-->
       <aside
-        class="hidden sm:flex w-full max-w-[200px] min-h-screen relative bg-white flex-col px-2 py-5"
+        class="border-r-2 hidden sm:flex w-full max-w-[200px] min-h-screen relative bg-white flex-col px-2 py-5"
       >
         <div class="fixed">
           <h1 class="text-rose-500 text-3xl font-bold">devhouse</h1>
@@ -61,12 +61,36 @@
       <!--Fim sidebar-->
 
       <main class="w-full flex flex-col pb-4">
+
         <!--Inicio menu mobile-->
-        <div class="w-full flex-col items-center px-3 py-2 bg-white">
-          <button class="text-3xl text-bold mt-4">X</button>
-          <nav class="flex flex-col mt-8 gap-5 w-full"></nav>
+        <div id="menu" class="absolute z-40 w-full hidden flex-col items-center px-3 py-2 bg-white shadow-xl">
+          <button id="btn-close" onclick="closeMenu()" class="text-3xl text-bold mt-4">X</button>
+          <nav class="flex flex-col mt-8 gap-5 w-full">
+            <a
+            href="#"
+            class="text-gray-500 font-medium hover:text-black hover:bg-gray-100 p-3 rounded-lg duration-300"
+            >Aluguel</a
+          >
+
+          <a
+            href="#"
+            class="text-gray-500 font-medium hover:text-black hover:bg-gray-100 p-3 rounded-lg duration-300"
+            >Compra</a
+          >
+
+          <a
+            href="#"
+            class="text-gray-500 font-medium hover:text-black hover:bg-gray-100 p-3 rounded-lg duration-300"
+            >Serviços</a
+          >
+
+          <a
+            href="#"
+            class="text-gray-500 font-medium hover:text-black hover:bg-gray-100 p-3 rounded-lg duration-300"
+            >Contatos</a
+          </nav>
         </div>
-        <!--Inicio menu mobile-->
+        <!--Fim menu mobile-->
 
         <!--Inicio header-->
 
@@ -98,7 +122,7 @@
               <i class="fa fa-user md:ml-1"></i>
             </button>
 
-            <button
+            <button id="btn-open" onclick="openMenu()"
               class="sm:hidden flex items-center justify-center px-4 py-2"
             >
               <i class="fa fa-bars" style="font-size: 24px"></i>
@@ -108,5 +132,7 @@
         <!--Fim header-->
       </main>
     </div>
+
+    <script src="/src/script.js"></script>
   </body>
 </html>
